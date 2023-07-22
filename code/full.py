@@ -77,6 +77,7 @@ elif not COLLECTION_NAME in DATABASES and "-q" in sys.argv:
     quit()
 else:
     print("Please use the -q or -index arguments to operate on the chosen database.")
+    quit()
 
 # function for reading a markdown file and cleaning the generated text
 def prepMD(fileName):
@@ -275,12 +276,14 @@ def query_index(query):
 
     # returns a list of tuples, each consisting of chapter title and subsection title, chapter text, and similarity score, for the results.
     ret = []
+    
     for res in results:
-        ret.append(
-            f"{res.payload['Heading']}\n{res.payload['Subheading']}",
+        temp = (
+            res.payload['Heading'] + "\n" + res.payload['Subheading'],
             res.payload["text"],
-            res.score,
+            res.score
         )
+        ret.append(temp)
     return ret
 
 # MAIN BODY OF THE PROGRAM

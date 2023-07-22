@@ -160,9 +160,13 @@ cython_debug/
 #.idea/
 
 code/*.txt
+code/static
+code/templates
+code/AIface.py
 db/*
 media/
 *.csv
 *.txt
 *bio*
-to-do*
+*to-do*
+*Tutorial/

@@ -2,11 +2,15 @@
 
 This program is designed to break down academic and other educational books into indexable databases, which can then be searched using queries written in natural language. It currently works only on books in markdown format (.md), and returns the most relevant subsection of a book as the answer to a query.
 
+## Prerequisites
+
+The OpenAI package, qdrant package, and textract packages must be installed on your computer.
+
+Additionally, you **must** include a .txt file in the /code folder title OpenAIKey.txt (case-sensitive). This file must contain an API key for OpenAI (which can be generated [here](https://platform.openai.com/account/api-keys)) and otherwise be blank.
+
 ## How to Use
 
-As a prerequisite to using this program, you **must** include a .txt file in the /code folder title OpenAIKey.txt (case-sensitive). This file must contain an API key for OpenAI (which can be generated [here](https://platform.openai.com/account/api-keys)) and otherwise be blank.
-
-To use, first place a book, in markdown format, in the main folder. Then double-click the General Search shortcut, which will open a command prompt window, which will ask you to choose between querying an existing database and creating or updating a database.
+To use, first place a book, in markdown format, in the main folder. Then use the search.bat file in the code folder, which will open a command prompt window. From there you will be asked you to choose between querying an existing database and creating or updating a database.
 
 ### Creating or Updating a Database
 

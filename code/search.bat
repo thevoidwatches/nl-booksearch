@@ -30,7 +30,7 @@ if "%choice%" == "q" (
     set /p book= "What book (in .md format) do you wish to index? "
     if exist "../%book%" (
         set /p db= "Name the database to create or update: "
-        python full.py -index -col %db% -if %book% -e
+        python full.py -index -col %db% -if %book% -e -index
         goto:end
     ) else (
         echo:Book %book% not found.
@@ -44,3 +44,4 @@ if "%choice%" == "q" (
 )
 :end
 echo:Goodbye.
+pause
